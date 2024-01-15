@@ -4,16 +4,17 @@
     {
         static void Main(string[] args)
         {
-            var cookiesRecipeApp = new CookiesRecipeApp();
+            var cookiesRecipeApp = new CookiesRecipeApp(new RecipeRepository(), new RecipeUserInteraction());
+
             cookiesRecipeApp.Run();
         }
 
-        class CookiesRecipeApp
+        public class CookiesRecipeApp
         {
-            private readonly RecipeRepository _recipeRepository;
-            private readonly RecipeUserInteraction _recipeUserInteraction;
+            private readonly IRecipeRepository _recipeRepository;
+            private readonly IRecipeUserInteraction _recipeUserInteraction;
 
-            public CookiesRecipeApp(RecipeRepository recipeRepository, RecipeUserInteraction recipeUserInteraction)
+            public CookiesRecipeApp(IRecipeRepository recipeRepository, IRecipeUserInteraction recipeUserInteraction)
             {
                 _recipeRepository = recipeRepository;
                 _recipeUserInteraction = recipeUserInteraction;
@@ -45,5 +46,34 @@
                 _recipeUserInteraction.Exit();
             }
         }
+    }
+
+    public interface IRecipeUserInteraction
+    {
+        void ShowMessage(string message);
+        void Exit();
+    }
+
+    public interface IRecipeRepository
+    {
+
+    }
+
+    public class RecipeUserInteraction : IRecipeUserInteraction
+    {
+        public void Exit()
+        {
+            Console.WriteLine("press any key to close");
+            Console.ReadKey();
+        }
+
+        public void ShowMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
+    }
+
+    public class RecipeRepository : IRecipeRepository
+    {
     }
 }
