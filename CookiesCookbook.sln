@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookiesCookbook", "CookiesCookbook.csproj", "{F9206BDD-4F8A-4255-A690-3D206741827A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9206BDD-4F8A-4255-A690-3D206741827A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9206BDD-4F8A-4255-A690-3D206741827A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9206BDD-4F8A-4255-A690-3D206741827A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9206BDD-4F8A-4255-A690-3D206741827A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB608897-9A1B-4FCA-9042-C9F4DF9B7035}
+	EndGlobalSection
+EndGlobal
